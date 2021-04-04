@@ -1,23 +1,34 @@
-import logo from './logo.svg';
+import useFetchIndexes from './hooks/useFetchIndexes';
+import Loader from './components/shared/Loader';
+import Header from './components/Header';
+import Error from './components/shared/Error';
+import IndexGroup from './components/IndexGroup';
 import './App.css';
 
 function App() {
+  const [indexes, isLoading, error] = useFetchIndexes();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <div className='app__container'>
+        <Header />
+        <main>
+          {error ? (
+            <Error message={error} />
+          ) : isLoading ? (
+            <Loader />
+          ) : (
+            indexes.map((group) => (
+              <IndexGroup
+                key={group.id}
+                name={group.name}
+                id={group.id}
+                items={group.indexes}
+              />
+            ))
+          )}
+        </main>
+      </div>
     </div>
   );
 }

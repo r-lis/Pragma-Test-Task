@@ -1,0 +1,10 @@
+.logo {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 112.4%;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+}

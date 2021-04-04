@@ -1,38 +1,46 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #e5e5e5;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body,
+html,
+#root,
+.app {
+  height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app__container {
+  margin: 0 auto;
+  width: 80vw;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+  padding-bottom: 155px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter Bold';
+  src: url('./assets/fonts/Inter/Inter-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src: url('./assets/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf')
+    format('truetype');
 }

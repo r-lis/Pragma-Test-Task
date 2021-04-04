@@ -1,0 +1,15 @@
+.loader {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in;
+  z-index: 2;
+}
+
+.svg {
+  margin: auto;
+  display: block;
+  shape-rendering: auto;
+}
